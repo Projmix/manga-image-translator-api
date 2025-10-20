@@ -33,4 +33,4 @@ ENV PYTHONPATH="/app"
 
 WORKDIR /app
 
-ENTRYPOINT ["python", "-m", "manga_translator"]
+CMD ["python", "server/main.py", "--host", "0.0.0.0", "--port", "8000", "--start-instance", "--models-ttl", "300"]
